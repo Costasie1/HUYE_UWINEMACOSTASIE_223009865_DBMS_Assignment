@@ -1,0 +1,154 @@
+mysql> create database ruhande;
+mysql> use ruhande;
+Database changed
+mysql> create table ngoma(ID int(16),FIRSTNAME char(20),LASTNAME char(20),GENDER char(8),PROVINCE char(20),DISTRICT char(20),SECTOR char(20),CELL char(12),EMAIL char(30),TELEPHONE int);
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+mysql> insert into ngoma values(1200080576262680,"UWINEMA","COSTASIE","FEMALE","NORTHERN","GAKENKE","GAKENKE","RUSAGARA","uwinemacostasie8@gmail.com",0782955028);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values(1200080576262680,"MAWAZO","WELLARS","MALE","NORTHERN","GAKENKE","NEMBA","GAHINGA","wellars813@gmail.com",0788691764);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql>insert into ngoma values(1200080576262680,"MAWAZO","WELLARS","MALE","NORTHERN","GAKENKE","NEMBA","GAHINGA","wellars813@gmail.com",0788691764);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values(1200607932886070,"IZERE","ANGE","MALE","SOURTHERN","HUYE","NGOMA","RUHANDE","htte100@gmail.com",0798905327);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values(1199080932886070,"UWERA","JENNIFER","FEMALE","EASTERN","NYAGATARE","NDAGO","NDAGO","Jennifer100@gmail.com",078882327);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values(1199080932834760,"UWASE","PELINE","MALE","WESTERN","RUSIZI","MUKARANGE","MUCACA","Janette00@gmail.com",0788768027);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values(119908093000760,"DUSABE","PEACE","FEMALE","KIGALI CITY","NYARUGENGE","NYAMIRAMBO","NYAMIRAMBO","peacee00@gmail.com",0780768027);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values(1200208093000760,"DUSABE","PEACE","FEMALE","KIGALI CITY","NYARUGENGE","NYAMIRAMBO","NYAMIRAMBO","peacee00@gmail.com",0780768027);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values(1200208093000760,"DUFA","PATRICE","FEMALE","KIGALI CITY","GASABO","NDERA","NYAMIRAMBO","saaacee00@gmail.com",0780768007);
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> insert into ngoma values(1200048093000760,"JESSICA","PCE","FEMALE","KIGALI CITY","GASABO","GIKOMERO","MURAMBI","jessye00@gmail.com",0780448007););
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> select* from ngoma;
++------------+-----------+----------+--------+-------------+------------+--------------+------------+----------------------------+-----------+
+| ID         | FIRSTNAME | LASTNAME | GENDER | PROVINCE    | DISTRICT   | SECTOR       | CELL       | EMAIL                      | TELEPHONE |
++------------+-----------+----------+--------+-------------+------------+--------------+------------+----------------------------+-----------+
+| 2147483647 | UWINEMA   | COSTASIE | FEMALE | NORTHERN    | GAKENKE    | GAKENKE      | RUSAGARA   | uwinemacostasie8@gmail.com | 782955028 |
+| 2147483647 | MAWAZO    | WELLARS  | MALE   | NORTHERN    | GAKENKE    | NEMBA        | GAHINGA    | wellars813@gmail.com       | 788691764 |
+| 2147483647 | MBABAZI   | HENRY    | MALE   | SOURTHERN   | KAMONYI    | GACURABWENGE | GIHINGA    | costantine100@gmail.com    | 792005327 |
+| 2147483647 | IZERE     | ANGE     | MALE   | SOURTHERN   | HUYE       | NGOMA        | RUHANDE    | htte100@gmail.com          | 798905327 |
+| 2147483647 | UWERA     | JENNIFER | FEMALE | EASTERN     | NYAGATARE  | NDAGO        | NDAGO      | Jennifer100@gmail.com      |  78882327 |
+| 2147483647 | UWASE     | PELINE   | MALE   | WESTERN     | RUSIZI     | MUKARANGE    | MUCACA     | Janette00@gmail.com        | 788768027 |
+| 2147483647 | DUSABE    | PEACE    | FEMALE | KIGALI CITY | NYARUGENGE | NYAMIRAMBO   | NYAMIRAMBO | peacee00@gmail.com         | 780768027 |
+| 2147483647 | DUSABE    | PEACE    | FEMALE | KIGALI CITY | NYARUGENGE | NYAMIRAMBO   | NYAMIRAMBO | peacee00@gmail.com         | 780768027 |
+| 2147483647 | DUFA      | PATRICE  | FEMALE | KIGALI CITY | GASABO     | NDERA        | NYAMIRAMBO | saaacee00@gmail.com        | 780768007 |
+| 2147483647 | JESSICA   | PCE      | FEMALE | KIGALI CITY | GASABO     | GIKOMERO     | MURAMBI    | jessye00@gmail.com         | 780448007 |
++------------+-----------+----------+--------+-------------+------------+--------------+------------+----------------------------+-----------+
+10 rows in set (0.00 sec)
+
+
+mysql> alter table ngoma add column status char(20);
+Query OK, 10 rows affected (0.03 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT* FROM NGOMA;
++------------+-----------+----------+--------+-------------+------------+------------+------------+----------------------------+-----------+--------+
+| ID         | FIRSTNAME | LASTNAME | GENDER | PROVINCE    | DISTRICT   | SECTOR     | CELL       | EMAIL                      | TELEPHONE | status |
++------------+-----------+----------+--------+-------------+------------+------------+------------+----------------------------+-----------+--------+
+| 2147483647 | UWINEMA   | COSTASIE | FEMALE | NORTHERN    | GAKENKE    | GAKENKE    | RUSAGARA   | uwinemacostasie8@gmail.com | 782955028 | NULL   |
+| 2147483647 | MAWAZO    | WELLARS  | MALE   | NORTHERN    | GAKENKE    | NEMBA      | GAHINGA    | wellars813@gmail.com       | 788691764 | NULL   |
+| 2147483647 | MAWAZO    | WELLARS  | MALE   | NORTHERN    | GAKENKE    | NEMBA      | GAHINGA    | wellars813@gmail.com       | 788691764 | NULL   |
+| 2147483647 | IZERE     | ANGE     | MALE   | SOURTHERN   | HUYE       | NGOMA      | RUHANDE    | htte100@gmail.com          | 798905327 | NULL   |
+| 2147483647 | UWERA     | JENNIFER | FEMALE | EASTERN     | NYAGATARE  | NDAGO      | NDAGO      | Jennifer100@gmail.com      |  78882327 | NULL   |
+| 2147483647 | UWASE     | PELINE   | MALE   | WESTERN     | RUSIZI     | MUKARANGE  | MUCACA     | Janette00@gmail.com        | 788768027 | NULL   |
+| 2147483647 | DUSABE    | PEACE    | FEMALE | KIGALI CITY | NYARUGENGE | NYAMIRAMBO | NYAMIRAMBO | peacee00@gmail.com         | 780768027 | NULL   |
+| 2147483647 | DUSABE    | PEACE    | FEMALE | KIGALI CITY | NYARUGENGE | NYAMIRAMBO | NYAMIRAMBO | peacee00@gmail.com         | 780768027 | NULL   |
+| 2147483647 | DUFA      | PATRICE  | FEMALE | KIGALI CITY | GASABO     | NDERA      | NYAMIRAMBO | saaacee00@gmail.com        | 780768007 | NULL   |
+| 2147483647 | JESSICA   | PCE      | FEMALE | KIGALI CITY | GASABO     | GIKOMERO   | MURAMBI    | jessye00@gmail.com         | 780448007 | NULL   |
++------------+-----------+----------+--------+-------------+------------+------------+------------+----------------------------+-----------+--------+
+10 rows in set (0.00 sec)
+mysql> update ngoma set status="married";
+Query OK, 10 rows affected (0.00 sec)
+Rows matched: 10  Changed: 10  Warnings: 0
+
+mysql> select* from ngoma;
++------------+-----------+----------+--------+-------------+------------+--------------+------------+----------------------------+-----------+---------+
+| ID         | FIRSTNAME | LASTNAME | GENDER | PROVINCE    | DISTRICT   | SECTOR       | CELL       | EMAIL                      | TELEPHONE | status  |
++------------+-----------+----------+--------+-------------+------------+--------------+------------+----------------------------+-----------+---------+
+| 2147483647 | UWINEMA   | COSTASIE | FEMALE | NORTHERN    | GAKENKE    | GAKENKE      | RUSAGARA   | uwinemacostasie8@gmail.com | 782955028 | married |
+| 2147483647 | MAWAZO    | WELLARS  | MALE   | NORTHERN    | GAKENKE    | NEMBA        | GAHINGA    | wellars813@gmail.com       | 788691764 | married |
+| 2147483647 | MBABAZI   | HENRY    | MALE   | SOURTHERN   | KAMONYI    | GACURABWENGE | GIHINGA    | costantine100@gmail.com    | 792005327 | married |
+| 2147483647 | IZERE     | ANGE     | MALE   | SOURTHERN   | HUYE       | NGOMA        | RUHANDE    | htte100@gmail.com          | 798905327 | married |
+| 2147483647 | UWERA     | JENNIFER | FEMALE | EASTERN     | NYAGATARE  | NDAGO        | NDAGO      | Jennifer100@gmail.com      |  78882327 | married |
+| 2147483647 | UWASE     | PELINE   | MALE   | WESTERN     | RUSIZI     | MUKARANGE    | MUCACA     | Janette00@gmail.com        | 788768027 | married |
+| 2147483647 | DUSABE    | PEACE    | FEMALE | KIGALI CITY | NYARUGENGE | NYAMIRAMBO   | NYAMIRAMBO | peacee00@gmail.com         | 780768027 | married |
+| 2147483647 | DUSABE    | PEACE    | FEMALE | KIGALI CITY | NYARUGENGE | NYAMIRAMBO   | NYAMIRAMBO | peacee00@gmail.com         | 780768027 | married |
+| 2147483647 | DUFA      | PATRICE  | FEMALE | KIGALI CITY | GASABO     | NDERA        | NYAMIRAMBO | saaacee00@gmail.com        | 780768007 | married |
+| 2147483647 | JESSICA   | PCE      | FEMALE | KIGALI CITY | GASABO     | GIKOMERO     | MURAMBI    | jessye00@gmail.com         | 780448007 | married |
++------------+-----------+----------+--------+-------------+------------+--------------+------------+----------------------------+-----------+---------+
+10 rows in set (0.00 sec)
+
+mysql> select firstname,lastname,telephone,status from ngoma;
++-----------+----------+-----------+---------+
+| firstname | lastname | telephone | status  |
++-----------+----------+-----------+---------+
+| UWINEMA   | COSTASIE | 782955028 | married |
+| MAWAZO    | WELLARS  | 788691764 | married |
+| MAWAZO    | WELLARS  | 788691764 | married |
+| IZERE     | ANGE     | 798905327 | married |
+| UWERA     | JENNIFER |  78882327 | married |
+| UWASE     | PELINE   | 788768027 | married |
+| DUSABE    | PEACE    | 780768027 | married |
+| DUSABE    | PEACE    | 780768027 | married |
+| DUFA      | PATRICE  | 780768007 | married |
+| JESSICA   | PCE      | 780448007 | married |
++-----------+----------+-----------+---------+
+10 rows in set (0.00 sec)
+
+mysql>  alter table ngoma drop column email;
+Query OK, 10 rows affected (0.03 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select* from ngoma;
++------------+-----------+----------+--------+-------------+------------+------------+------------+-----------+---------+
+| ID         | FIRSTNAME | LASTNAME | GENDER | PROVINCE    | DISTRICT   | SECTOR     | CELL       | TELEPHONE | status  |
++------------+-----------+----------+--------+-------------+------------+------------+------------+-----------+---------+
+| 2147483647 | UWINEMA   | COSTASIE | FEMALE | NORTHERN    | GAKENKE    | GAKENKE    | RUSAGARA   | 782955028 | married |
+| 2147483647 | MAWAZO    | WELLARS  | MALE   | NORTHERN    | GAKENKE    | NEMBA      | GAHINGA    | 788691764 | married |
+| 2147483647 | MAWAZO    | WELLARS  | MALE   | NORTHERN    | GAKENKE    | NEMBA      | GAHINGA    | 788691764 | married |
+| 2147483647 | IZERE     | ANGE     | MALE   | SOURTHERN   | HUYE       | NGOMA      | RUHANDE    | 798905327 | married |
+| 2147483647 | UWERA     | JENNIFER | FEMALE | EASTERN     | NYAGATARE  | NDAGO      | NDAGO      |  78882327 | married |
+| 2147483647 | UWASE     | PELINE   | MALE   | WESTERN     | RUSIZI     | MUKARANGE  | MUCACA     | 788768027 | married |
+| 2147483647 | DUSABE    | PEACE    | FEMALE | KIGALI CITY | NYARUGENGE | NYAMIRAMBO | NYAMIRAMBO | 780768027 | married |
+| 2147483647 | DUSABE    | PEACE    | FEMALE | KIGALI CITY | NYARUGENGE | NYAMIRAMBO | NYAMIRAMBO | 780768027 | married |
+| 2147483647 | DUFA      | PATRICE  | FEMALE | KIGALI CITY | GASABO     | NDERA      | NYAMIRAMBO | 780768007 | married |
+| 2147483647 | JESSICA   | PCE      | FEMALE | KIGALI CITY | GASABO     | GIKOMERO   | MURAMBI    | 780448007 | married |
++------------+-----------+----------+--------+-------------+------------+------------+------------+-----------+---------+
+10 rows in set (0.00 sec)
+
+
+mysql> select* from ngoma where gender="male" OR telephone=0782955028;
++------------+-----------+----------+--------+-----------+----------+--------------+----------+-----------+---------+
+| ID         | FIRSTNAME | LASTNAME | GENDER | PROVINCE  | DISTRICT | SECTOR       | CELL     | TELEPHONE | status  |
++------------+-----------+----------+--------+-----------+----------+--------------+----------+-----------+---------+
+| 2147483647 | UWINEMA   | COSTASIE | FEMALE | NORTHERN  | GAKENKE  | GAKENKE      | RUSAGARA | 782955028 | married |
+| 2147483647 | MAWAZO    | WELLARS  | MALE   | NORTHERN  | GAKENKE  | NEMBA        | GAHINGA  | 788691764 | married |
+| 2147483647 | MBABAZI   | HENRY    | MALE   | SOURTHERN | KAMONYI  | GACURABWENGE | GIHINGA  | 792005327 | married |
+| 2147483647 | IZERE     | ANGE     | MALE   | SOURTHERN | HUYE     | NGOMA        | RUHANDE  | 798905327 | married |
+| 2147483647 | UWASE     | PELINE   | MALE   | WESTERN   | RUSIZI   | MUKARANGE    | MUCACA   | 788768027 | married |
++------------+-----------+----------+--------+-----------+----------+--------------+----------+-----------+---------+
+5 rows in set (0.00 sec)
+
+mysql> select* from ngoma where province="NORTHERN" AND lastname="wellars";
++------------+-----------+----------+--------+----------+----------+--------+---------+-----------+---------+
+| ID         | FIRSTNAME | LASTNAME | GENDER | PROVINCE | DISTRICT | SECTOR | CELL    | TELEPHONE | status  |
++------------+-----------+----------+--------+----------+----------+--------+---------+-----------+---------+
+| 2147483647 | MAWAZO    | WELLARS  | MALE   | NORTHERN | GAKENKE  | NEMBA  | GAHINGA | 788691764 | married |
+| 2147483647 | MAWAZO    | WELLARS  | MALE   | NORTHERN | GAKENKE  | NEMBA  | GAHINGA | 788691764 | married |
++------------+-----------+----------+--------+----------+----------+--------+---------+-----------+---------+
+2 rows in set (0.00 sec)
